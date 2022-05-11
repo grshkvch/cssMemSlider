@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #375761;
+    color: #ffffff;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 40px;
+    /* border: 10px solid rgba(61, 52, 52, 1); */
+    background-color: #6b4b4b
+}
+
+.slider__meme {
+    width: 100%;
+    height: 70vh;
+}
+
+.slider__meme_img_1 {
+    background: url('assets/img/mem_2.jpg');
+}
+
+.slider__meme_img_2 {
+    display: none;
+    background: url('assets/img/mem_3.jpg');
+}
+
+.slider__meme_img_3 {
+    display: none;
+    background: url('assets/img/mem_1.jpg');
+}
+
+.slider__meme_img_4 {
+    display: none;
+    background: url('assets/img/mem_4.jpg');
+}
+
+.slider__meme_img_5 {
+    display: none;
+    background: url('assets/img/mem_7.jpg');
+}
+
+.slider__meme_img_6 {
+    display: none;
+    background: url('assets/img/mem_11.jpg');
+}
+
+.slider__meme_img_1, .slider__meme_img_2, .slider__meme_img_3, .slider__meme_img_4, .slider__meme_img_5, .slider__meme_img_6 {
+    width: 100%;
+    height: 70vh;
+    border-radius: 40px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.slider__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+.slider__text_1, .slider__text_2, .slider__text_3, .slider__text_4, .slider__text_5, .slider__text_6 {
+    font-size: 22px;
+    display: none;
+}
+
+.slider__text_1 {
+    display: block;
+}
+
+.slider__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider__button {
+    cursor: pointer;
+    padding: 5px 10px
+}
