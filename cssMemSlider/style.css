@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #375761;
+    color: #ffffff;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 70%;
+    max-width: 80rem;
+    border-radius: 4rem;
+    background-color: #6b4b4b
+}
+
+.slider__input {
+    display: none;
+}
+
+.slider__img-wrap {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.slider__img {
+    width: 100%;
+    height: 70vh;
+    border-radius: 4rem;
+    transition: 1s;
+}
+
+.slider__line {
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 2rem;
+}
+
+.slider__text-wrap {
+    height: 12vh;
+    overflow: hidden;
+}
+
+.slider__text {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    font-size: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+
+.slider__buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.slider__button-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+}
+
+.slider__button-wrap:hover .slider__button{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.slider__button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+    border-radius: 5rem;
+    transition: .1s;
+}
+
+/* 1 */
+#input-1:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(0vh);
+}
+
+#input-1:checked ~ .slider__line .slider__text-wrap #text-1{
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-1:active ~ .slider__line .slider__buttons #label-1 .slider__button  {
+    background: #375761;
+}
+
+#input-1:checked ~ .slider__line .slider__buttons #label-1 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 2 */
+#input-2:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(-70vh);
+}
+
+#input-2:checked ~ .slider__line .slider__text-wrap #text-2{
+    transform: translateY(-12vh);
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-2:active ~ .slider__line .slider__buttons #label-2 .slider__button  {
+    background: #375761;
+}
+
+#input-2:checked ~ .slider__line .slider__buttons #label-2 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 3 */
+#input-3:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(calc(-70vh * 2));
+}
+
+#input-3:checked ~ .slider__line .slider__text-wrap #text-3{
+    transform: translateY(calc(-12vh * 2));
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-3:active ~ .slider__line .slider__buttons #label-3 .slider__button  {
+    background: #375761;
+}
+
+#input-3:checked ~ .slider__line .slider__buttons #label-3 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 4 */
+#input-4:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(calc(-70vh * 3));
+}
+
+#input-4:checked ~ .slider__line .slider__text-wrap #text-4{
+    transform: translateY(calc(-12vh * 3));
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-4:active ~ .slider__line .slider__buttons #label-4 .slider__button  {
+    background: #375761;
+}
+
+#input-4:checked ~ .slider__line .slider__buttons #label-4 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 5 */
+#input-5:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(calc(-70vh * 4));
+}
+
+#input-5:checked ~ .slider__line .slider__text-wrap #text-5{
+    transform: translateY(calc(-12vh * 4));
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-5:active ~ .slider__line .slider__buttons #label-5 .slider__button  {
+    background: #375761;
+}
+
+#input-5:checked ~ .slider__line .slider__buttons #label-5 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* 6 */
+#input-6:checked ~ .slider__img-wrap .slider__img {
+    transform: translateY(calc(-70vh * 5));
+}
+
+#input-6:checked ~ .slider__line .slider__text-wrap #text-6{
+    transform: translateY(calc(-12vh * 5));
+    opacity: 1;
+    visibility: visible;
+}
+
+#input-6:active ~ .slider__line .slider__buttons #label-6 .slider__button  {
+    background: #375761;
+}
+
+#input-6:checked ~ .slider__line .slider__buttons #label-6 .slider__button  {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+    .slider__text {
+        font-size: 1.6rem;
+    }
+
+    .slider__button-wrap {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+    
+    .slider__button {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+
+
+@media (max-width: 540px) {
+
+    .slider__line {
+        flex-direction: column;
+        justify-content: normal;
+        height: 9rem;
+        gap: 0.5rem;
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .slider__text-wrap {
+        width: 100%;
+        height: 6vh;
+    }
+
+    .slider__text {
+        font-size: 1.3rem;
+        height: 6vh;
+    }
+
+    .slider__buttons {
+        order: -1;
+    }
+
+    .slider__button-wrap {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .slider__button {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .slider__img-wrap {
+        height: 50vh;
+    }
+    
+    .slider__img {
+        height: 50vh;
+    }
+
+    #input-2:checked ~ .slider__img-wrap .slider__img {
+        transform: translateY(-50vh);
+    }
+
+    #input-2:checked ~ .slider__line .slider__text-wrap #text-2{
+        transform: translateY(-6vh);
+    }
+
+    #input-3:checked ~ .slider__img-wrap .slider__img {
+        transform: translateY(calc(-50vh * 2));
+    }
+
+    #input-3:checked ~ .slider__line .slider__text-wrap #text-3{
+        transform: translateY(calc(-6vh * 2));
+    }
+
+    #input-4:checked ~ .slider__img-wrap .slider__img {
+        transform: translateY(calc(-50vh * 3));
+    }
+    
+    #input-4:checked ~ .slider__line .slider__text-wrap #text-4{
+        transform: translateY(calc(-6vh * 3));
+    }
+
+    #input-5:checked ~ .slider__img-wrap .slider__img {
+        transform: translateY(calc(-50vh * 4));
+    }
+    
+    #input-5:checked ~ .slider__line .slider__text-wrap #text-5{
+        transform: translateY(calc(-6vh * 4));
+    }
+
+    #input-6:checked ~ .slider__img-wrap .slider__img {
+        transform: translateY(calc(-50vh * 5));
+    }
+
+    #input-6:checked ~ .slider__line .slider__text-wrap #text-6{
+        transform: translateY(calc(-6vh * 5));
+    }
+}
